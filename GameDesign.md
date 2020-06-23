@@ -20,3 +20,5 @@ There are 3 buttons for the interface.
 * Options: Players can change background music.
 * Credits: Show developer's name.
 ## Rough Drawings
+![Main Menu Image](https://user-images.githubusercontent.com/65083207/85395940-e0833c00-b58b-11ea-829d-0005183defea.png)
+The Main Menu
