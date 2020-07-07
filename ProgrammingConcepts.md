@@ -49,8 +49,13 @@
 (To be updated)
 
 ## Loops
-
-## Functions
+* Loops are functions which run iterations in programs. It repeats particular codes inside of the curly braces after the loop statement.
+* Loops are used when programmers would like to make certain codes repeated for several times in a specified condition.
+* The reasons of why loops are used are to avoid writing the same function again and again. If there are functions which carry out exactly same stuffs, programmers can save considerable time for typing every single line of the same code just by using loop. For instance, if programmers hope to draw exactly same circles in a row from beginning of the canvas to the end of canvas, they can make use of loop to update the x-axis coordinate of each circle.
+* There are various method of utilizing loop: `while()`, `for()`, and nested `for()` loop.
+  * `while()` requires conditions inside the parenthesis. The codes inside the curly braces is executed if the conditions are true. To get meaningful results, there must be update of variables used at conditions parenthesis inside the curly braces and the declaration and initialization of variables must be done before `while()`.
+  * `for()` requires have three parameters in the parenthesis: 
+## Function
 
 ## Classes
 
