@@ -45,6 +45,9 @@
 * Conditonal statments require operators. There are two types of operators: relational operators and logical operators.
   * Relational operators check the value of arguments. --> <(the value is smaller), <=(the value is smaller or equal), >(the value is bigger), >=(the value is bigger or equal), ==(both of the values are equal), ===(both of the values and the types of data are equal), !=(the value is not equal), !==(the value and datatype are not equal)
   * Logical operators check if there are other condtions. --> &&(AND. Both of conditions must be true to execute the codes in the braces), ||(OR. Any of conditions must be true to execute the codes in the braces, which means not all of conditions must be true if at least one condition is true.), !(NOT. The given conditions are not true.)
+#### Code Snippet
+(To be updated)
+
 ## Loops
 
 ## Functions
