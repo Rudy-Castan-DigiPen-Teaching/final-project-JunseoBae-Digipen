@@ -61,7 +61,7 @@
  
 ## Function
 * Function is a basic block of what program executes, such as `function Draw_Fruits(){}`, `function Convert_to_kilogram(mass){}`. It gives a new name for other functions and parameters' names.
-* Function is used when there should be some functions which have proper function names.
+* Function i* s used when there should be some functions which have proper function names.
 * Many programmers use function because it is very useful to give meaningful name for function and parameter. In addition, it can call functions just by inputting a function. For instance, if there is a function drawing a flower which is `function flower(x, y)`, just writing down `flower(100, 100)` will draw a flower at (100, 100). It can create significantly simple codes which has a good code readability.
 * Function can be used just by calling function's name with `()`. For example, if there is a function which moves a shape side-to-side and there is a function which name is `move()`, just calling the function will do the things inside `move()`.
   * Some functions require parameters. Parameters are used as arguments and it is required to put values as arguments when calling functions. For instance, if someone wants to draw a cube at desired locations on canvas, it is required to give the value of locations of where he or she wants to draw a cube. So, when someone wants to call the function, `function cube(x,y)`, it is mandatory to give values to the parameters such as `cube(200, 300)` or `cube(width / 4, height / 2)`.
@@ -70,5 +70,12 @@
 (To be updated)
 
 ## Classes
-
+* Classes are encapsulation(compression in other word) of what programs execute. They are usually classifed by what functionalities they have. For instance, a game with credit and option can have classes which manage each screen, such as `CreditScreen.js` and `OptionScreen.js`.
+* Classes are used in situations when there are too many functions in one file so it can be classified by what roles they do in the codes.
+* The primary reason of using classes is to divide functions by their roles. If there are too many functions with codes in single file, it could be a total mess that even programmers cannot track down what each line of code meaning. So, classes are used frequently so programmers can easily know what codes perform. So, the advantage of using classes is simpler structure.
+* To use classes, programmers must make a new file which can save code information. The name of a new file are named by "what will this file manage on the program?" generally. If there is .html file, they need to include the new file in there. 
+  * After the new file is made, there are 3 elements that they need to create: `constructor()`, `update()`, and `draw()`. `constructor()` is the point where to declare variables in the classes. It is important to use `this.(name of variable)` when using any of declared files in classes, even when the declaration of variables are made. `update()` is mostly used to update the function, especially when it comes to animations. `draw()` is where the actual shapes are drawn.
+  * To call classes, there must be a variable which can store the information of classes. A keyword `new` is used to get the classes. For instance, if there is a variable which name is `physics` and a class which name is `class Gravity{}`, the class can be called as `physics = new Gravity()`. Also, to call the `update()` and `draw()` inside the class, there must be `physics.update();` for the update and `physics.draw();` for the drawing.
+#### Code Snippet
+(To be updated)
 ## Arrays
