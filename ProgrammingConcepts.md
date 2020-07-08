@@ -11,7 +11,7 @@
 * Shapes can be used by giving some arguments to the parameters of shapes. 
   The parameters are usually the position of shape's certain point or the positions of each vertex.
 #### Code Snippet
-(To be updated)
+`square(x, y, TILE_SIZE);`
 
 ## Colors
 * Colors are functions changing shape's charcteristics. Colors can change shape's color, transparency, borders. Colors are basesd on RGB values.(R-red, G-green, B-blue)
@@ -22,7 +22,7 @@
   * For borders of shapes, it use `stroke()` mainly. Same as `color()`, it also can take 1 parameter at minimum and 4 parameters for maximum.
   * `fill()` is used to fill shapes with colors, while `noFill()` is used to remove colors. Likewise, `noStorke()` is used to remove borders of shapes.
  #### Code Snippet
-(To be updated)
+`fill('orange');`
 
 ## Variables
 * Variables are ways of expression of assigning values. Each variable can store one value at one time and it can be functioned as an argument.
@@ -31,7 +31,7 @@
 * There are two functions to declare a variable: `var` and `let`. The difference between those 2 functions are the scope of variable. A variable declared by `var` can be used throughout the entire program while the one declared by `let` is only affected within a certain block.
   * To use variables, it is mandatory to declare the names of variables and initialize them to one value. After that, programmers can use the variable to parameters where they want to use them. For example, if a programmer wants to draw a square with size of 100, declaring the name of a variable and initializing it into 100 ( like `let size = 100` or `var size = 100`) and putting the variable to `square()` like `square(width / 2. height / 2, size)` will draw a square with size of 100 at the center of canvas.
 #### Code Snippet
-(To be updated)
+`let y = TILE_SIZE * row`
 
 ## Conditional Statements
 * Conditional statements are identifiers which checking out conditions within parenthesises. It identifys if the conditions are true or false. If the conditions are true, the codes within curly braces are executed. However, if the condtions are false, the codes within the braces do nothing.
@@ -46,7 +46,21 @@
   * Relational operators check the value of arguments. --> <(the value is smaller), <=(the value is smaller or equal), >(the value is bigger), >=(the value is bigger or equal), ==(both of the values are equal), ===(both of the values and the types of data are equal), !=(the value is not equal), !==(the value and datatype are not equal)
   * Logical operators check if there are other condtions. --> &&(AND. Both of conditions must be true to execute the codes in the braces), ||(OR. Any of conditions must be true to execute the codes in the braces, which means not all of conditions must be true if at least one condition is true.), !(NOT. The given conditions are not true.)
 #### Code Snippet
-(To be updated)
+`if(key == 'w'){
+      didPlayerMove = true;
+      --newRow;
+    }else if(key == 's'){
+      didPlayerMove = true;
+      ++newRow;
+    }
+    else if(key == 'a'){
+      didPlayerMove = true;
+      --newColumn;
+    }
+    else if(key == 'd'){
+      didPlayerMove = true;
+      ++newColumn;
+    }`
 
 ## Loops
 * Loops are functions which run iterations in programs. It repeats particular codes inside of the curly braces after the loop statement.
@@ -57,7 +71,11 @@
   * `for()` requires have three parameters in the parenthesis: declaration and initialization of the regional variable, conditional statement for the regional variable, and update of the regional variable. After that, the codes inside the curly braces after the `for()` is executed until the conditional statement becomes false.
   * There can be dual loops in one loop, which is known as "nested loop". Nested loop is a set of loop which interacts each other. For instance, `for(...){ for(...){ } }` is one way of nested loop. In that case, the inner `for()` loop is executed first. After the inner `for()` loop is done, the outer `for()` loop is updated and it checks out the inner `for()` loop. If the outer `for()` loop's condition is wrong, the inner `for()` loop will not work.
  #### Code Snippet
-(To be updated)
+`for (let row = 0; row < MAP_SIZE; row++) {
+      let y = TILE_SIZE * row
+      for (let column = 0; column < MAP_SIZE; column++) {
+        let x = TILE_SIZE * column; }
+        }`
  
 ## Function
 * Function is a basic block of what program executes, such as `function Draw_Fruits(){}`, `function Convert_to_kilogram(mass){}`. It gives a new name for other functions and parameters' names.
@@ -67,7 +85,12 @@
   * Some functions require parameters. Parameters are used as arguments and it is required to put values as arguments when calling functions. For instance, if someone wants to draw a cube at desired locations on canvas, it is required to give the value of locations of where he or she wants to draw a cube. So, when someone wants to call the function, `function cube(x,y)`, it is mandatory to give values to the parameters such as `cube(200, 300)` or `cube(width / 4, height / 2)`.
   * If functions have to calculate and need to return the calculated value, functions must have at least one parameter and use it for the formula. To return the value, `return` statement is required. For instance, if there is a program which converts gram to kilogram, there can be a function `function GramToKilogram(g)` and the formula will be `var kilogram = g / 1000;` After that, using return as `return kilogram;` will return kilogram converted from gram.
 #### Code Snippet
-(To be updated)
+`function make_2d_array(rows, columns) {
+  let collection = [];
+  for (let i = 0; i < rows; ++i) 
+    collection.push(new Array(columns));
+    return collection;
+}`
 
 ## Classes
 * Classes are encapsulation(compression in other word) of what programs execute. They are usually classifed by what functionalities they have. For instance, a game with credit and option can have classes which manage each screen, such as `CreditScreen.js` and `OptionScreen.js`.
@@ -77,5 +100,20 @@
   * After the new file is made, there are 3 elements that they need to create: `constructor()`, `update()`, and `draw()`. `constructor()` is the point where to declare variables in the classes. It is important to use `this.(name of variable)` when using any of declared files in classes, even when the declaration of variables are made. `update()` is mostly used to update the function, especially when it comes to animations. `draw()` is where the actual shapes are drawn.
   * To call classes, there must be a variable which can store the information of classes. A keyword `new` is used to get the classes. For instance, if there is a variable which name is `physics` and a class which name is `class Gravity{}`, the class can be called as `physics = new Gravity()`. Also, to call the `update()` and `draw()` inside the class, there must be `physics.update();` for the update and `physics.draw();` for the drawing.
 #### Code Snippet
-(To be updated)
+`class Game {
+  constructor() {
+    this.playerX = 0;
+    this.playerY = 0;
+    this.world = make_2d_array(MAP_SIZE, MAP_SIZE);
+    this.CreateWorld();
+  }
+ }`
+
 ## Arrays
+* Arrays are sequence of elements or space which can store multiple elements. Basically, arrays contain their size(length) by the number of element inside the arrays and also have a coordinate number called index. Particularly, index value starts from 0, not 1. The type of data arrays can contain is not confined to number, it can be a string, a character, and even boolean data type(true, false) can be used as elements.
+* Arrays are used when there must be multiple elements in one variable or space for storing information of multiple elements.
+* The main reason of using arrays is because to avoid using a lot of variables for tasks. If arrays are used with loop, less variables are needed to draw many shapes since arrays contain the information of a large amount of shapes. Also, if arrays are used with classes. Stuffs that classses are doing will happen by the number of the array's element.
+* Arrays can be declared by square bracket(`[]`). If none of elements are given in an array, the array has undefined value at index value 0. If the array's elements are given like `let array = [1, 3, 6, 8];`, The array has 4 elements and the maximum value of index is 3. Also, the length of array is 4.
+  * Arrays have a lot of functions. For example, `.push` is functions which add a new element in an array, and `.splice` is the one which removes or adds, or replaces elements of arrays. For example, from the array `let array = [1, 3, 6, 8];`, `array.push(10);` will change the array into `let array = [1, 3, 6, 8, 10];` Furthermore, `array.splice(4, 1, 9);` will change the array into `let array = [1, 3, 6, 8, 9]`.
+#### Code Snippet
+`this.world[portal_y][portal_x] = PORTAL;`
