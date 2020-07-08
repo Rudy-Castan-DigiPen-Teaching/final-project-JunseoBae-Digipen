@@ -15,6 +15,10 @@ The Player controls googly eyes and it can move around the maze. The player must
 If the player moves to the portal at the last maze(5th maze), the game ends.
 ## Interface
 There are 2 screens in game.
-* Start Screen: Shows a text "Press any key to play the game!"
+* Starting Screen: Shows a text "Press any key to play the game!"
 * Play Mode: Play a game.
 ## Pictures
+![Starting Screen](https://user-images.githubusercontent.com/65083207/86920805-3ac3f580-c165-11ea-8aa6-584ca664f1c3.JPG)
+The starting screen
+![Gameplay Screen](https://user-images.githubusercontent.com/65083207/86920811-3bf52280-c165-11ea-9e0d-4beee3445223.JPG)
+Gameplay Screen
